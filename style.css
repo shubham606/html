@@ -1,0 +1,36 @@
+h1{
+    text-align: center;
+    color: chocolate;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 50;
+}
+
+
+form{
+    
+    text-align: left;
+    border:solid ;
+    border-color:yellowgreen;
+    background-color:coral;
+    font-size: 10;
+    font-style: oblique;
+    float:inherit;
+}
+script{
+    float: right;
+    height: 200;
+    width: 100;
+}
+body{
+    text-align: match-parent;
+}
+
+.container {
+  width: 500px;
+  clear: both;
+}
+.container input {
+  width: 100%;
+  clear: both;
+}
