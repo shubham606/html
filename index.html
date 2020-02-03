@@ -1,0 +1,53 @@
+
+<html>
+    <head>
+        <title> Registration Form</title>
+        
+
+        <script>
+            window.addEventListener('load', function() {
+            document.querySelector('input[type="file"]').addEventListener('change', function() {
+            if (this.files && this.files[0]) {
+            var img = document.querySelector('img');  // $('img')
+            img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+            img.onload = imageIsLoaded;
+      }
+  });
+});
+
+function imageIsLoaded() {
+//  alert(this.src);  // blob url
+  // update width and height ...
+}
+            
+          
+            
+</script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        
+        <h1>Registration Form</h1>
+        
+    </head>
+    <body >
+        <div class="container">
+            <form action>
+        
+            <label><div style="float:right"><img id="myImg" src="#" alt="your image" height=150 width=150>
+                <input type='file' name="pic"   ></div>
+        </label> <br>
+        
+        <label> FirstName:</label> <input type="text" name="fname" placeholder="FirstName" pattern="[A-Za-z]{4,20}" required  > <br>
+                <label>    LastName:</label>  <input type="text" placeholder="LastName" name="lname" pattern="[A-Za-z]{4,20}" required ><br>
+            
+            <label>    E-mail:  </label>  <input type="email" name="Email"placeholder="E-mail" pattern=".+@(gmail|yahoo|outlook)\.com$"><br>
+            <label>    Contact No.:</label> <input type="tel" name="mobile" placeholder="Contact Number" pattern="[7-9]{1}[0-9]{9}" required ><br>
+            <label>    Password:</label> <input type="password"  name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[!@#$%^&*])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter,one special character and at least 8 or more characters" required><br>
+            <label>    Confirm Password:</label> <input type="password" name="confirmpassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[!@#$%^&*])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter,one special character and at least 8 or more characters" required><br>
+                
+            <label>    Submit:</label><input type="submit" placeholder="Submit" >
+            <label>    Reset: </label><input type="reset" placeholder="Reset"><br><br>
+               
+        </form></div>
+    </body>
+</html>
